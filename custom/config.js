@@ -8,7 +8,7 @@
 * Note: When filebrowser, format and stylescombo are removed, their
 * dependencies (popup, listblock and richcombo) are also removed.
 *
-* 1. Add the following:
+* 1. Add the following plugins:
 *
 *    Accessibility Checker  (a11ychecker)
 *    Find / Replace         (find)
@@ -17,7 +17,7 @@
 *    List Style             (liststyle)
 *    Show Blocks            (showblocks)
 *
-* 2. Remove the following:
+* 2. Remove the following plugins:
 *
 *    File Browser           (filebrowser)
 *    Floating Space         (floatingspace)
@@ -31,7 +31,7 @@
 *    WebSpellChecker        (wsc)
 *
 * 3. Add the a11yfirst plugin dependencies that were removed when the
-*    Standard preset plugins format and stylescombo were removed
+*    Standard preset plugins format and stylescombo were removed:
 *
 *    List Block             (listblock)
 *    Rich Combo             (richcombo)
@@ -41,19 +41,19 @@
 * following are the additional plugins provided by Standard over Basic, with
 * comments specifying whether to include each:
 *
-*   elementspath     // yes
-*   filebrowser      // no
-*   horizontalrule   // no
-*   htmlwriter       // no
-*   magicline        // yes
-*   maximize         // no
-*   popup            // no
-*   resize           // yes
-*   showborders      // yes
-*   sourcearea       // yes
-*   tab              // yes
-*   tableselection   // yes
-*   tabletools       // yes
+*    elementspath     // yes
+*    filebrowser      // no
+*    horizontalrule   // no
+*    htmlwriter       // no
+*    magicline        // yes
+*    maximize         // no
+*    popup            // no
+*    resize           // yes
+*    showborders      // yes
+*    sourcearea       // yes
+*    tab              // yes
+*    tableselection   // yes
+*    tabletools       // yes
 */
 
 CKEDITOR.editorConfig = function ( config ) {
