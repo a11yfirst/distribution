@@ -641,8 +641,8 @@ CKEDITOR.dialog.add( 'a11yimage', function ( editor ) {
       }
 
     },
+
     onChange: function( widget ) {
-        // this = CKEDITOR.ui.dialog.select
       var node = this.getInputElement().findOne('select').$;
       this.setValue(node.value);
     }
@@ -650,44 +650,24 @@ CKEDITOR.dialog.add( 'a11yimage', function ( editor ) {
 
   /* ---------------------------------------------------------------- */
 
-  var imageDescriptionHelpLink = {
-    id: 'imageDescHelpLink',
+  var imageDescriptionHelp = {
+    id: 'imageDescHelp',
     type: 'button',
-    label: lang.imageDescHelpLinkText,
+    label: lang.imageDescHelpLabel,
 
     setup: function () {
-      var elem = this.getElement();
-
-      this.buttonStyle = elem.$.style;
-      this.buttonStyle.borderColor = 'transparent';
-      this.buttonStyle.backgroundColor = 'white';
-
-      this.spanStyle = elem.getFirst().$.style;
-      this.spanStyle.color = 'blue';
-      this.spanStyle.paddingLeft = '2px';
-      this.spanStyle.paddingRight = '2px';
-      this.spanStyle.textDecoration = 'underline';
-    },
-
-    onFocus: function () {
-      this.buttonStyle.borderColor = 'rgb(19, 159, 247)';
-    },
-
-    onBlur: function () {
-      this.buttonStyle.borderColor = 'transparent';
+      var button = this.getDialog().getContentElement( 'info', 'imageDescHelp' );
+      button.getElement().addClass( 'a11yimage_desc_help' );
     },
 
     onClick: function () {
-      editor.a11yfirst.helpOption = 'ImageHelp';
-      editor.execCommand('a11yFirstHelpDialog');
-    },
-
-    onKeyDown: function ( event ) {
-      if (event.data.$.keyCode === 13) {
+      var helpPlugin = CKEDITOR.plugins.get( 'a11yfirsthelp' );
+      if ( helpPlugin ) {
         editor.a11yfirst.helpOption = 'ImageHelp';
-        editor.execCommand('a11yFirstHelpDialog');
-        event.data.$.stopPropagation();
-        event.data.$.preventDefault();
+        editor.execCommand( 'a11yFirstHelpDialog' );
+      }
+      else {
+        alert( lang.helpNotFound );
       }
     }
   };
@@ -780,7 +760,7 @@ CKEDITOR.dialog.add( 'a11yimage', function ( editor ) {
 
           longDescriptionSelect,
 
-          imageDescriptionHelpLink,
+          imageDescriptionHelp,
 
           captionCheckbox,
 
