@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2018 University of Illinois - Jon Gunderson and Nicholas Hoyt. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Inclusive Authoring: Recipes and Nutrition Blog</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../a11yfirst.css">
+  <link rel="stylesheet" href="usability.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <style>
+    table {
+      table-layout: fixed;
+      width: 50%;
+      border: 1px solid grey;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      border: 1px solid grey;
+      padding: 0 0.25em;
+    }
+    table th:nth-child(1) {
+      width: 45%;
+    }
+    table th:nth-child(2) {
+      width: 25%;
+      text-align: center;
+    }
+    table th:nth-child(3) {
+      width: 30%;
+      text-align: right;
+    }
+    table td:nth-child(2), table td:nth-child(3) {
+      text-align: right;
+    }
+    table td[colspan="3"] {
+      font-size: 80%;
+    }
+  </style>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+
+<body id="main">
+
+<div class="container">
+
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-ref="introduction" href="#">Introduction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-ref="page1" href="#">Recipes Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-ref="page2" href="#">Research Studies</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="introduction">
+
+    <header>
+      <div class="row">
+
+        <div class="col title">
+          <h1>A11yFirst Introduction</h1>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+
+      <section class="inclusive">
+        <div class="row">
+          <div class="col-12">
+
+             <h1>Inclusive Authoring: Creating Accessible Documents</h1>
+
+              <h2>What is accessibility?</h2>
+
+              <p>Accessibility, as it relates to a web document, is a set of features or qualities that enables all of the information contained in the document to be perceivable and understandable by all readers, including people with disabilities.</p>
+
+              <p><strong>Important concept:</strong> <em>all</em> of the information -> <em>all</em> readers</p>
+
+              <h2>Who benefits from accessibility?</h2>
+
+              <p>In general, all readers of your document. Importantly, this includes people with disabilities such as:</p>
+
+              <ul>
+                <li>blindness, other visual impairments</li>
+                <li>deafness, hard of hearing</li>
+                <li>cognitive impairments</li>
+                <li>learning disabilities</li>
+              </ul>
+
+              <h2>Who is responsible for the accessibility of a web document?</h2>
+
+              <p>The author! Only you know what you are trying to communicate.</p>
+
+              <h2>What makes a web document accessible?</h2>
+
+              <p>Some of the more important features include:</p>
+
+              <ol>
+                <li>Well-defined structure: use of headings and subheadings; appropriate use of lists and tables</li>
+                <li>Text equivalents for images, audio, video</li>
+                <li>Avoidance of using visual styling alone to convey structure or meaning</li>
+              </ol>
+
+              <h2>What is a text equivalent?</h2>
+
+              <p>When a reader of your document is unable to see or hear non-text content such as an image or audio clip, a text equivalent provides an accessible description that conveys <em>all of the pertinent information that the visual or audio content would convey</em> to readers that do not have that particular disability.</p>
+
+              <p><strong>Important concept:</strong> <em>equivalency</em> between the image or audio content and its text description</p>
+
+              <h2>How to think about whether your document is accessible?</h2>
+
+              <p>A couple of simple tests/thought experiments:</p>
+
+              <ol>
+                <li>Turn off your monitor and imagine that you are relying on a screen reader<sup>[1]</sup> to understand what the document, including all of its images, communicates to its readers. Are you getting <em>all</em> of the information?</li>
+                <li>Turn off your speakers and imagine that you are relying on captioning or a text transcript of the audio content to understand what the document communicates to its readers. Again, are you getting <em>all</em> of the information?</li>
+              </ol>
+
+              <p><sup>[1]</sup> A screen reader is an assistive technology that enables a person who is blind or visually impaired to obtain and interactively utilize an audio (via speech synthesis) or braille rendering of a document.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <div id="page1" class="blog" hidden>
+    <header>
+      <div class="row">
+
+        <div class="col-8">
+          <h1>Recipes Blog</h1>
+        </div>
+
+        <div class="col">
+            <button onclick="edit(event)" class="btn btn-light float-right">Edit</button>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="editor_page">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <div id="page1_content">
+                <!-- BEGIN fruit-salad.html -->
+                <h1>Fruit Salad</h1>
+
+                <p>Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either in their own juices or a syrup. When served as an appetizer or as a dessert, a fruit salad is sometimes known as a fruit cocktail or fruit cup. In different forms fruit salad can be served as an appetizer, a side-salad, or a dessert.</p>
+
+                <h2>Description</h2>
+
+                <p>[Please insert Fruit Bowls image here — width: 600 pixels; alignment: right]</p>
+
+                <p>There are a number of home recipes for fruit salad that contain different kinds of fruit, or that use a different kind of sauce other than the fruit's own juice or syrup. Common ingredients used in fruit salads include strawberries, pineapple, honeydew, watermelon, grapes, and kiwifruit. Various recipes may call for the addition of nuts, fruit juices, certain vegetables, yogurt, or other ingredients.</p>
+
+                <p>One variation is a Waldorf-style fruit salad, which uses a mayonnaise-based sauce. Other recipes use sour cream (such as in ambrosia), yogurt or even mustard as the primary sauce ingredient. A variation on fruit salad uses whipped cream mixed in with many varieties of fruits (usually a mixture of berries), and also often include miniature marshmallows. Rojak, a Malaysian fruit salad, uses a spicy sauce with peanuts and shrimp paste. In the Philippines, fruit salads are popular party and holiday fare, usually made with buko, or young coconut, and condensed milk in addition to other canned or fresh fruit.</p>
+
+                <p>Mexico has a popular variation of the fruit salad called Bionico which consists of various fruits drenched in condensed milk and sour cream mix.</p>
+
+                <p>There is also an extended variety of fruit salads in Moroccan cuisine, often as part of a kemia, a selection of appetizers or small dishes analogous to Spanish tapas or eastern Mediterranean mezze.</p>
+
+                <p>A fruit salad ice cream is also commonly manufactured, with small pieces of real fruit embedded in, flavored either with juices from concentrate, fruit extracts, or artificial chemicals.</p>
+
+                <h2>Nutrition information</h2>
+
+                <p>A nutritional analysis of a typical fruit salad without added sugar is shown below. The breakdown for a 250 gram serving (approximately one half pound) is 300 calories from 2 grams of fat, 70 grams (net) of carbohydrate and 3 grams of protein.</p>
+
+                <p>[Please insert Nutrition Facts image here — width: 400 pixels; alignment: none]</p>
+
+                <table width="50%" style="border: 1px solid grey; border-collapse: collapse;">
+                  <caption>Nutrition Facts Table</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Serving size</th>
+                      <td colspan="2">2 (250 g)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Amount per serving</th>
+                      <td colspan="2">300 calories</td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">% Daily Value</th>
+                    </tr>
+                    <tr>
+                      <td><strong>Total fat</strong></td>
+                      <td>2 g</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>Saturated fat</td>
+                      <td>0 g</td>
+                      <td>0%</td>
+                    </tr>
+                    <tr>
+                      <td>Trans fat</td>
+                      <td>0 g</td>
+                      <td>0%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Cholesterol</strong></td>
+                      <td>0 mg</td>
+                      <td>0%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Sodium</strong></td>
+                      <td>40 mg</td>
+                      <td>2%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Total carbohydrate</strong></td>
+                      <td>75 g</td>
+                      <td>27%</td>
+                    </tr>
+                    <tr>
+                      <td>Dietary fiber</td>
+                      <td>5 g</td>
+                      <td>18%</td>
+                    </tr>
+                    <tr>
+                      <td>Total sugars</td>
+                      <td>70 g</td>
+                      <td>n/a</td>
+                    </tr>
+                    <tr>
+                      <td>Includes 0 g added sugars</td>
+                      <td>0 g</td>
+                      <td>0%</td>
+                    </tr>
+                    <tr>
+                      <td>Sugar alcohol</td>
+                      <td>1 g</td>
+                      <td>n/a</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Protein</strong></td>
+                      <td>3 g</td>
+                      <td>6%</td>
+                    </tr>
+                    <tr>
+                      <td>Vitamin D</td>
+                      <td>1 mcg</td>
+                      <td>4%</td>
+                    </tr>
+                    <tr>
+                      <td>Calcium</td>
+                      <td>130 mg</td>
+                      <td>10%</td>
+                    </tr>
+                    <tr>
+                      <td>Iron</td>
+                      <td>0.9 mg</td>
+                      <td>4%</td>
+                    </tr>
+                    <tr>
+                      <td>Potassium</td>
+                      <td>705 mg</td>
+                      <td>15%</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">*The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>[Please insert horizontal rule image here — width: 800 pixels; alignment: none]</p>
+                <h2>Health benefits of a high fiber diet</h2>
+
+                <p>Dietary fibers are found in fruits, vegetables and whole grains. Dietary fiber is found in plants, typically eaten whole, raw or cooked, although fiber can be added to make dietary supplements and fiber-rich processed foods. Grain bran products have the highest fiber contents, such as crude corn bran (79 g per 100 g) and crude wheat bran (43 g per 100 g), which are ingredients for manufactured foods. Medical authorities, such as the Mayo Clinic, recommend adding fiber-rich products to the Standard American Diet (SAD) which is rich in processed and artificially sweetened foods, with minimal intake of vegetables and legumes.</p>
+
+                <h2>Plant sources of fiber</h2>
+
+                <p>Some plants contain significant amounts of soluble and insoluble fiber. For example, plums and prunes have a thick skin covering a juicy pulp. The skin is a source of insoluble fiber, whereas soluble fiber is in the pulp. Grapes also contain a fair amount of fiber.</p>
+                <!-- END fruit-salad.html -->
+              </div>
+
+              <div class="editor" hidden>
+                  <div id="page1_editor"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row image_resources" hidden>
+          <div class="col">
+            <h2>Image Resources</h2>
+            <p><em>Select button above the image to copy image URL to clipboard.</em></p>
+          </div>
+        </div>
+
+        <div class="row image_resources" hidden>
+          <div class="col-3">
+              <figure>
+                  <div class="center"><input type="image" src="images/copy-to-clipboard.png" title="Copy Image 1 URL to clipboard"/></div>
+                  <img src="images/fruit.jpg">
+                  <figcaption>Image 1</figcaption>
+              </figure>
+          </div>
+
+          <div class="col-3">
+            <figure>
+              <div class="center"><input type="image" src="images/copy-to-clipboard.png" title="Copy Image 2 URL to clipboard"/></div>
+              <img src="images/nutrition-facts.png">
+              <figcaption>Image 2</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-3">
+            <figure>
+              <div class="center"><input type="image" src="images/copy-to-clipboard.png" title="Copy Image 3 URL to clipboard"/></div>
+              <img src="images/strawberry.png">
+              <figcaption>Image 3</figcaption>
+            </figure>
+          </div>
+    </main>
+  </div>
+
+  <div id="page2" class="blog" hidden>
+    <header>
+      <div class="row">
+
+        <div class="col-8">
+          <h1>Research Studies</h1>
+        </div>
+
+        <div class="col">
+            <button onclick="edit(event)" class="btn btn-light float-right">Edit</button>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="editor_page">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <div id="page2_content">
+                <!-- BEGIN human-nutrition.html -->
+                <h1>Human Nutrition</h1>
+
+                <p>Human nutrition deals with the provision of essential nutrients in food that are necessary to support human life and health. Poor nutrition is a chronic problem often linked to poverty, food security or a poor understanding of nutrition and dietary practices. Malnutrition and its consequences are large contributors to deaths and disabilities worldwide. Good nutrition helps children grow physically, promotes human biological development and helps in the eradication of poverty.</p>
+
+                <p>The human body contains chemical compounds, such as water, carbohydrates, amino acids (in proteins), fatty acids (in lipids), and nucleic acids (DNA and RNA). These compounds are composed of elements such as carbon, hydrogen, oxygen, nitrogen, phosphorus. Any study done to determine nutritional status must take into account the state of the body before and after experiments, as well as the chemical composition of the whole diet and of all the materials excreted and eliminated from the body (including urine and feces). Comparing food to waste material can help determine the specific compounds and elements absorbed and metabolized by the body. The effects of nutrients may only be discernible over an extended period of time, during which all food and waste must be analyzed. The number of variables involved in such experiments is high, making nutritional studies time-consuming and expensive, which explains why the science of human nutrition is still slowly evolving.</p>
+
+                <h2>Average calorie consumption data</h2>
+
+                <p>The graph below, entitled 'People Are Consuming More Calories' from the World Resources Institute, shows that from 1961 to 2010, the average number of calories consumed per capita per day for a variety of countries increased significantly.</p>
+
+                <p>The ranges in calories consumed per capita per day from 1961 to 2010 for the countries shown are:</p>
+                <ul>
+                  <li>United States: from 2,900 to 3,700</li>
+                  <li>European Union: from 3,000 to 3,600</li>
+                  <li>Brazil: from 2,200 to 3,350</li>
+                  <li>China: from fewer than 1,500 to 3,350</li>
+                  <li>Nigeria: from 2,000 to 2,750</li>
+                  <li>Indonesia: from 1,800 to 2,750</li>
+                  <li>Japan: from 2,500, peaking at 3,000 in the late 1980's until around 1995, and then dropping off to 2,750</li>
+                  <li>India: from 2,000 to nearly 2,500</li>
+                  <li>Ethiopia: from 1,800 with considerable fluctuation through the early 1990's, and then increasing to 2,100</li>
+                </ul>
+
+                <p>The world average, as illustrated by the graph, started at around 2,200 calories in 1961 and ended at 2,800 in 2010.</p>
+
+                <p>The graph also projects increases in calorie consumption for all of the countries shown, from 2010 to 2050, with the world average starting at 2,800 and ending at 3,100.</p>
+
+                <p>[Please insert World Resources Institute graphic here — width: 800 pixels; alignment: none]</p>
+                <!-- END human-nutrition.html -->
+              </div>
+
+              <div class="editor" hidden>
+                  <div id="page2_editor"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row image_resources" hidden>
+          <div class="col">
+            <h2>Image Resources</h2>
+            <p><em>Select button above the image to copy image URL to clipboard.</em></p>
+          </div>
+        </div>
+
+        <div class="row image_resources" hidden>
+          <div class="col-3">
+            <figure>
+              <div class="center"><input type="image" src="images/copy-to-clipboard.png" title="Copy Image 1 URL to clipboard"/></div>
+              <img src="images/nutrition-graph.png">
+              <figcaption>Image 1</figcaption>
+            </figure>
+          </div>
+        </div>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      A11yFirst Project Usability Testing 2019
+   </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="../../ckeditor.js"></script>
+  <script src="usability.js"></script>
+</body>
+</html>
