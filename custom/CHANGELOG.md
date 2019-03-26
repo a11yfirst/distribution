@@ -39,6 +39,14 @@ All notable changes to the A11yFirst project will be documented in this file.
   * Added information in the nutrition facts table that was missing compared
     to the information in the image
 
+* Configuration of heading and paragraph format tags for a11yheading plugin
+  * Replaced the 'oneLevel1' property with 'allow_only_one_h1' property
+  * Removed the 'headings' property to instead use the config.format_tags
+    property and its syntax of semicolon-separated tags for the configuration
+    of both heading and paragraph format tags
+  * Updated the algorithm for interpretation of the heading tags configuration
+    to disallow any gaps
+
 ## v1.1.2 – 13 Mar 2019
 
 ### Updates
