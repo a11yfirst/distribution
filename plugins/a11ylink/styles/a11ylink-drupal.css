@@ -1,0 +1,17 @@
+.a11ylink_dialog  .cke_dialog_body {
+  font-size: 12px !important;
+}
+
+.a11ylink_dialog .cke_dialog_ui_fieldset {
+  padding-top: 0px;
+}
+
+.a11ylink_dialog .cke_dialog_ui_fieldset legend {
+  position: relative;
+  top: -0em;
+}
+
+.a11ylink_dialog  .cke_dialog_body label {
+  font-weight: normal !important;
+  display: inline;
+}
